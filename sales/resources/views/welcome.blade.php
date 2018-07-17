@@ -33,55 +33,55 @@
 
                             <li><a href="#">
 
-                                    <img  src="{{asset("storage/images/16.jpg")}}" alt="img01"><h4>Boots</h4>
+                                    <img  src="{{asset("storage/images/16.jpg")}}" alt="img01">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/2.jpg")}}" alt="img02"><h4>Oxfords</h4>
+                                    <img src="{{asset("storage/images/17.jpg")}}" alt="img02">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/3.jpg")}}" alt="img03"><h4>Loafers</h4>
+                                    <img src="{{asset("storage/images/18.jpg")}}" alt="img03">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/4.jpg")}}" alt="img04"><h4>Sneakers</h4>
-                                </a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/5.jpg")}}" alt="img05"><h4>Belts</h4>
-                                </a></li>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/6.jpg")}}" alt="img06"><h4>Hats &amp; Caps</h4>
-                                </a></li>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/7.jpg")}}" alt="img07"><h4>Sunglasses</h4>
-                                </a></li>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/8.jpg")}}" alt="img08"><h4>Scarves</h4>
+                                    <img src="{{asset("storage/images/4.jpg")}}" alt="img04">
                                 </a></li>
                         </ul>
                         <ul>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/9.jpg")}}" alt="img09"><h4>Casual</h4>
+                                    <img src="{{asset("storage/images/5.jpg")}}" alt="img05">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/10.jpg")}}" alt="img10"><h4>Luxury</h4>
+                                    <img src="{{asset("storage/images/6.jpg")}}" alt="img06">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/11.jpg")}}" alt="img11"><h4>Sport</h4>
+                                    <img src="{{asset("storage/images/7.jpg")}}" alt="img07">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/8.jpg")}}" alt="img08">
                                 </a></li>
                         </ul>
                         <ul>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/12.jpg")}}" alt="img12"><h4>Carry-Ons</h4>
+                                    <img src="{{asset("storage/images/9.jpg")}}" alt="img09">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/13.jpg")}}" alt="img13"><h4>Duffel Bags</h4>
+                                    <img src="{{asset("storage/images/10.jpg")}}" alt="img10">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/14.jpg")}}" alt="img14"><h4>Laptop Bags</h4>
+                                    <img src="{{asset("storage/images/11.jpg")}}" alt="img11">
+                                </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/12.jpg")}}" alt="img12">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/15.jpg")}}" alt="img15"><h4>Briefcases</h4>
+                                    <img src="{{asset("storage/images/13.jpg")}}" alt="img13">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/14.jpg")}}" alt="img14">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/15.jpg")}}" alt="img15">
                                 </a></li>
                         </ul>
                         <nav>
@@ -165,10 +165,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="well well-lg offer-box offer-colors">
-
-                </div>
-                <!-- /.div -->
             </div>
             <!-- /.col -->
             <div class="col-md-9">
@@ -243,82 +239,7 @@
                         <li><a href="#">&raquo;</a></li>
                     </ul>
                 </div>
-                <!-- /.row -->
-                <div>
-                    <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Clothing</a></li>
-                        <li class="active">Men's Clothing</li>
-                    </ol>
-                </div>
-                <!-- /.div -->
-                <div class="row">
-                    <div class="btn-group alg-right-pad">
-                        <button type="button" class="btn btn-default"><strong>3005  </strong>items</button>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                Sort Products &nbsp;
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">By Price Low</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">By Price High</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p>
-                                    <a href="#" class="btn btn-primary" role="button">See Details</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <ul class="pagination alg-right-pad">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div>
-                <!-- /.row -->
+
             </div>
             <!-- /.col -->
         </div>

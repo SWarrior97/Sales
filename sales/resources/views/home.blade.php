@@ -15,6 +15,7 @@
                     @endif
 
                     {{Auth::user()->roleToStr()}}
+                        @include('welcome')
                 </div>
             </div>
         </div>
