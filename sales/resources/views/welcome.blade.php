@@ -381,7 +381,7 @@
     <script type="text/javascript" src="{{ URL::asset('ItemSlider/js/jquery.catslider.js') }}"></script>
 
     <script>
-        $(function () {
+        jQuery(document).ready(function ($) {
 
             $('#mi-slider').catslider();
 
