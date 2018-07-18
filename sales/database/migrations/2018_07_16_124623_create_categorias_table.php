@@ -18,6 +18,22 @@ class CreateCategoriasTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('categoria')->insert([
+            'name' => "Alimentaçao"
+        ]);
+
+        DB::table('categoria')->insert([
+            'name' => "Roupas"
+        ]);
+
+        DB::table('categoria')->insert([
+            'name' => "Calçados"
+        ]);
+
+        DB::table('categoria')->insert([
+            'name' => "Acessorios"
+        ]);
     }
 
     /**
@@ -27,6 +43,6 @@ class CreateCategoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('categoria');
     }
 }

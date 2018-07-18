@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="well well-lg offer-box text-center">
-                    Sales
+
                 </div>
                 <div class="main box-border">
                     <div id="mi-slider" class="mi-slider">
@@ -33,58 +33,62 @@
 
                             <li><a href="#">
 
-                                    <img  src="{{asset("storage/images/corn_flakes.jpg")}}" alt="img01">
+                                    <img  src="{{asset("storage/images/asd.jpg")}}" alt="img01">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/crunch.jpg")}}" alt="img02">
+                                    <img src="{{asset("storage/images/asd.jpg")}}" alt="img02">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/nesquik.jpg")}}" alt="img03">
-                                </a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/blusa.jpg")}}" alt="img05">
+                                    <img src="{{asset("storage/images/asd.jpg")}}" alt="img03">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/blusa_rosa.jpg")}}" alt="img06">
-                                </a></li>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/polo.jpg")}}" alt="img07">
-                                </a></li>
-                            <li><a href="#">
-                                    <img src="{{asset("storage/images/t_shirt.jpg")}}" alt="img08">
+                                    <img src="{{asset("storage/images/asd.jpg")}}" alt="img04">
                                 </a></li>
                         </ul>
                         <ul>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/vans.jpg")}}" alt="img09">
+                                    <img src="{{asset("storage/images/jkl.jpg")}}" alt="img05">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/sapatos_toco_alto.jpg")}}" alt="img10">
+                                    <img src="{{asset("storage/images/qwe.jpg")}}" alt="img06">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/chinelos.jpg")}}" alt="img11">
+                                    <img src="{{asset("storage/images/jkl.jpg")}}" alt="img07">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/qwe.jpg")}}" alt="img08">
                                 </a></li>
                         </ul>
                         <ul>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/swatch.jpg")}}" alt="img12">
+                                    <img src="{{asset("storage/images/tyu.jpg")}}" alt="img09">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/pulseira.jpg")}}" alt="img13">
+                                    <img src="{{asset("storage/images/tyu.jpg")}}" alt="img10">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/colares.jpg")}}" alt="img14">
+                                    <img src="{{asset("storage/images/tyu.jpg")}}" alt="img11">
+                                </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/zxc.jpg")}}" alt="img12">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{{asset("storage/images/brincos.jpg")}}" alt="img15">
+                                    <img src="{{asset("storage/images/zxc.jpg")}}" alt="img13">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/zxc.jpg")}}" alt="img14">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="{{asset("storage/images/zxc.jpg")}}" alt="img15">
                                 </a></li>
                         </ul>
                         <nav>
-                            @foreach($categorias as $categoria)
-                                <a href="#">{{$categoria->name}}</a>
-                            @endforeach
+                            <a href="#">Shoes</a>
+                            <a href="#">Accessories</a>
+                            <a href="#">Watches</a>
+                            <a href="#">Bags</a>
                         </nav>
                     </div>
 
@@ -268,7 +272,7 @@
             </div>
 
             <div class="col-md-4">
-                <strong>Localizaçao</strong>
+                <strong>Our Location</strong>
                 <hr>
                 <p>
                     Praia, Santiago,<br />
@@ -279,7 +283,7 @@
 
             </div>
             <div class="col-md-4 social-box">
-                <strong>Redes Sociais </strong>
+                <strong>We are Social </strong>
                 <hr>
                 <a href=""><i class="fa fa-facebook-square fa-3x "></i></a>
             </div>

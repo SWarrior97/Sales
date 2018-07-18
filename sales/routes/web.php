@@ -10,11 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@welcome')->name('welcome');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/admin', 'UserController@showAdminInicialPage')->name('admin');
+Route::get('/produtos', 'ProductController@index')->name('gerir.produtos');
+Route::get('/produtos/{id}', 'ProductController@getDetails')->name('detalhes.produto');
+
+Route::get('/criar/produto', 'ProductController@showCreateProd')->name('criar.produto');
+Route::post('/criar/produto', 'ProductController@storeProd')->name('guardar.produto');
