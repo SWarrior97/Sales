@@ -23,3 +23,15 @@ Route::get('/produtos/{id}', 'ProductController@getDetails')->name('detalhes.pro
 
 Route::get('/criar/produto', 'ProductController@showCreateProd')->name('criar.produto');
 Route::post('/criar/produto', 'ProductController@storeProd')->name('guardar.produto');
+
+Route::get('/criar/produto', 'ProductController@showCreateProd')->name('criar.produto');
+
+Route::delete('/produto/{produto}', 'ProductController@delete')->name('apagar.produto');
+
+Route::get('/getProdutosCategoria/{categoria}', 'ProductController@getProdutosCategoria')->name('getProdutosCategoria');
+
+
+
+Route::get('/getProdutosOrderByPrice/{id}/{categoria}', 'ProductController@getProdutosOrderByPrice')->name('getProdutosOrderByPrice');
+
+Route::get('/categorias', 'CategoriaController@index')->name('gerir.categoria');

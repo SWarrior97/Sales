@@ -96,144 +96,60 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-md-3">
-                <div>
-                    <a href="#" class="list-group-item active">Electronics
-                    </a>
-                    <ul class="list-group">
-
-                        <li class="list-group-item">Mobile
-                            <span class="label label-primary pull-right">234</span>
-                        </li>
-                        <li class="list-group-item">Computers
-                            <span class="label label-success pull-right">34</span>
-                        </li>
-                        <li class="list-group-item">Tablets
-                            <span class="label label-danger pull-right">4</span>
-                        </li>
-                        <li class="list-group-item">Appliances
-                            <span class="label label-info pull-right">434</span>
-                        </li>
-                        <li class="list-group-item">Games & Entertainment
-                            <span class="label label-success pull-right">34</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.div -->
-                <div>
-                    <a href="#" class="list-group-item active list-group-item-success">Clothing & Wears
-                    </a>
-                    <ul class="list-group">
-
-                        <li class="list-group-item">Men's Clothing
-                            <span class="label label-danger pull-right">300</span>
-                        </li>
-                        <li class="list-group-item">Women's Clothing
-                            <span class="label label-success pull-right">340</span>
-                        </li>
-                        <li class="list-group-item">Kid's Wear
-                            <span class="label label-info pull-right">735</span>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- /.div -->
-                <div>
-                    <a href="#" class="list-group-item active">Accessaries & Extras
-                    </a>
-                    <ul class="list-group">
-                        <li class="list-group-item">Mobile Accessaries
-                            <span class="label label-warning pull-right">456</span>
-                        </li>
-                        <li class="list-group-item">Men's Accessaries
-                            <span class="label label-success pull-right">156</span>
-                        </li>
-                        <li class="list-group-item">Women's Accessaries
-                            <span class="label label-info pull-right">400</span>
-                        </li>
-                        <li class="list-group-item">Kid's Accessaries
-                            <span class="label label-primary pull-right">89</span>
-                        </li>
-                        <li class="list-group-item">Home Products
-                            <span class="label label-danger pull-right">90</span>
-                        </li>
-                        <li class="list-group-item">Kitchen Products
-                            <span class="label label-warning pull-right">567</span>
-                        </li>
-                    </ul>
-                </div>
+                <?php $i=0?>
+                @foreach($arrayProdCat as $prod)
+                    <?php $id="categoria".$i?>
+                    <div>
+                        <a id={{$id}} href="{{route('getProdutosCategoria',$prod->categoria)}}" class="list-group-item active">{{$prod->categoria->name}}<span class="label label-primary pull-right"></span>
+                        </a>
+                        <?php $i++?>
+                    </div>
+                @endforeach
             </div>
             <!-- /.col -->
             <div class="col-md-9">
                 <div>
+                    <?php $categoria ?>
+                    @foreach($produtosCategorias as $prod)
+                        <?php $categoria= $prod->categoria?>
+                        @break
+                    @endforeach
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active">Electronics</li>
+                        <li><a href="{{route('welcome')}}">Home</a></li>
+                        <li class="active">{{$categoria->name}}</li>
                     </ol>
                 </div>
                 <!-- /.div -->
                 <div class="row">
                     <div class="btn-group alg-right-pad">
-                        <button type="button" class="btn btn-default"><strong>1235  </strong>items</button>
+                        <button type="button" class="btn btn-default"><strong>{{$countProds}}  </strong>items</button>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
                                 Sort Products &nbsp;
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">By Price Low</a></li>
+                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>1,'categoria'=>$categoria])}}">By Price Low</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">By Price High</a></li>
+                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>2,'categoria'=>$categoria])}}">By Price High</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                    @foreach($produtosCategorias as $prod)
+                        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="{{asset("storage/images/$prod->photo")}}" alt="" />
+                                <div class="caption">
+                                    <h3>{{$prod->name}}</h3>
+                                    <p>Preço : <strong>{{$prod->preco}} esc</strong>  </p>
+                                    <p> <a href="{{route('detalhes.produto',Crypt::encrypt($prod->id))}}" class="btn btn-primary" role="button">See Details</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
-                        <div class="thumbnail product-box">
-                            <img src="{{asset("storage/img/dummyimg.png")}}" alt="" />
-                            <div class="caption">
-                                <h3><a href="#">Samsung Galaxy </a></h3>
-                                <p>Price : <strong>$ 3,45,900</strong>  </p>
-                                <p> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <ul class="pagination alg-right-pad">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                    @endforeach
                 </div>
 
             </div>
@@ -296,6 +212,7 @@
     <!--Slider JavaScript file  -->
     <script type="text/javascript" src="{{ URL::asset('ItemSlider/js/modernizr.custom.63321.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('ItemSlider/js/jquery.catslider.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/welcome.js') }}"></script>
 
     <script>
         jQuery(document).ready(function ($) {

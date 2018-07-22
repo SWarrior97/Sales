@@ -47,8 +47,19 @@
             <div class="col-md-6">
                 <a class="btn btn-primary" href="{{URL::previous()}}">Voltar</a>
                 <!-- TODO-->
-                <a class="btn btn-danger" href="">Eliminar</a>
-                <a class="btn btn-info" href="">Editar</a>
+
+                @guest
+                @else
+                    <form method="POST" action="{{ route('apagar.produto',$produto) }}" aria-label="{{ __('') }}" class="form-group" >
+                        @csrf
+                        {{ method_field('delete') }}
+                        <button type="submit" class="btn btn-danger">
+                            {{ __('Eliminar') }}
+                        </button>
+                    </form>
+
+                    <a class="btn btn-info" href="">Editar</a>
+                @endguest
             </div>
         </div>
 

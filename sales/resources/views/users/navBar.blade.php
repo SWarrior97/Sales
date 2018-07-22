@@ -25,7 +25,8 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="{{ route('gerir.produtos') }}">Gestao Produtos</a>
-            <a href="">Gestao Categorias</a>
+            <a href="{{ route('gerir.categoria') }}">Gestao Categorias</a>
+            <!--TODO-->
             <a href="">Interesses</a>
         </div>
 
