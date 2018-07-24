@@ -105,6 +105,8 @@
                         <?php $i++?>
                     </div>
                 @endforeach
+                    <a id={{$id}} href="{{route('gerir.produtos')}}" class="list-group-item active">Todos os produtos<span class="label label-primary pull-right"></span>
+                    </a>
             </div>
             <!-- /.col -->
             <div class="col-md-9">
@@ -129,9 +131,9 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>1,'categoria'=>$categoria])}}">By Price Low</a></li>
+                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>1,'categoria'=>$categoria])}}">Preço mais baixo</a></li>
                                 <li class="divider"></li>
-                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>2,'categoria'=>$categoria])}}">By Price High</a></li>
+                                <li><a href="{{route('getProdutosOrderByPrice',['id'=>2,'categoria'=>$categoria])}}">Preço mais alto</a></li>
                             </ul>
                         </div>
                     </div>

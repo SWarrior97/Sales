@@ -35,3 +35,12 @@ Route::get('/getProdutosCategoria/{categoria}', 'ProductController@getProdutosCa
 Route::get('/getProdutosOrderByPrice/{id}/{categoria}', 'ProductController@getProdutosOrderByPrice')->name('getProdutosOrderByPrice');
 
 Route::get('/categorias', 'CategoriaController@index')->name('gerir.categoria');
+
+
+Route::get('/produto/{produto}/editar', 'ProductController@showEditarForm')->name('editar.produto');
+
+Route::post('/produto/{produto}/editar', 'ProductController@atualizarProduto')->name('atualizar.produto');
+
+Route::get('/produto/procurar', 'ProductController@searchProd')->name('procurar.produto');
+
+Route::get('/produto/procurarPreco', 'ProductController@filterProdByPrice')->name('procurar.produtoPreco');

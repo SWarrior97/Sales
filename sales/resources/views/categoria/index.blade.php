@@ -34,7 +34,8 @@
                             <tr>
                                 <td>{{$categoria->name}}</td>
                                 <td>
-                                    <!--TODO-->
+                                    <a class="btn-sm btn-info" href="#">Editar</a>
+                                    <a class="btn-sm btn-danger" href="#">Remover</a>
                                 </td>
                             </tr>
                         @endforeach

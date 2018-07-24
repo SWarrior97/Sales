@@ -58,7 +58,7 @@
                         </button>
                     </form>
 
-                    <a class="btn btn-info" href="">Editar</a>
+                    <a class="btn btn-info" href="{{route('editar.produto',$produto)}}">Editar</a>
                 @endguest
             </div>
         </div>

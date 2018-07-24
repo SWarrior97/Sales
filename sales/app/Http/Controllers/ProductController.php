@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
     public function index(){
-        $produtos = Produto::paginate(10);
+        //$produtos = Produto::paginate(10);
+        $produtos = Produto::all();
 
         return view('produtos.index',compact('produtos'));
     }
@@ -82,9 +83,6 @@ class ProductController extends Controller
     }
 
     public function getProdutosOrderByPrice($id,Categoria $categoria){
-        //dd("ID: ".$id."              Categoria:".$categoria);
-
-        $countProds = Produto::all()->count();
         $produtos = Produto::all();
         $paginatedProds = Produto::paginate(3);
         $categorias = Categoria::all();
@@ -108,4 +106,51 @@ class ProductController extends Controller
 
         return view('welcome',compact('categoria','produtos','categorias','countProds','paginatedProds','arrayProdCat','produtosCategorias'));
     }
+
+    public function showEditarForm(Produto $produto){
+        $categorias = Categoria::all();
+
+
+        return view('produtos.edit',compact('categorias','produto'));
+    }
+
+    public function atualizarProduto(Request $request,Produto $produto){
+        //dd($request->all());
+        $produto->name = $request->name;
+        $produto->preco = $request->preco;
+        $produto->categoria_id = $request->categoria;
+
+        if($request->hasFile('imagem')){
+            $path = $request->file('imagem')->storeAs(
+                'public/images', $produto->photo
+            );
+            $produto->photo	= explode('/', $path)[2];
+        }
+
+        $produto->save();
+
+        return redirect()->intended('/produtos')->with('message_success', 'Produto editado com sucesso !');
+    }
+
+    public function searchProd(Request $request){
+        $produtos=Produto::where('name', 'LIKE', "%".$request->name."%")->get();
+
+
+        return view('produtos.index',compact('produtos'));
+    }
+
+    public function filterProdByPrice(Request $request){
+        //dd($request->filter);
+        $produtos = Produto::all();
+        $allProdutos = Produto::paginate();
+
+        if($request->filter == "low"){
+            $produtos = $produtos->sortBy('preco');
+        }else if($request->filter == "high"){
+            $produtos = $produtos->sortByDesc('preco');
+        }
+
+        return view('produtos.index',compact('produtos'));
+    }
+
 }
